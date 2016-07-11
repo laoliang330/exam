@@ -5,15 +5,8 @@ class ClassController extends Controller {
 
     public function index(){
 
-//        $Rated=M('Classrated');
-//        $whereStr='rateduserId='.'10001';
-//        $ratedClassId=$Rated->where($whereStr)->getField('ratedClassId');
-//        $this->assign('ratedClassId',$ratedClassId);
-//        dump($ratedClassId);
-//        exit;
         $Data = D('ClassView');// 实例化Data数据模型
         $map['class.inUse']=1;
-        $map['class.status']=1;
         $result = $Data->where($map)->order('Class.id desc')->select();
         $this->assign('class',$result);
 

@@ -8,8 +8,10 @@ class ClassController extends Controller {
 
     public function classList(){
         $Room = D("ClassView");
+        $map['class.inUse']=1;
+        $map['class.ownerId']=session('userid');
         $Room->create();
-        $roomDate=$Room->where('inUse=1')->order('id desc')->select();
+        $roomDate=$Room->where($map)->order('class.id desc')->select();
         echo json_encode($roomDate);
     }
 
