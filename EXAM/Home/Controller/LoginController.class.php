@@ -15,7 +15,7 @@ class LoginController extends Controller {
         $password=I('post.password','');
         //$verify_code=I('verify','');
         if($username==''||$password==''){
-            $this->redirect("Home/Login/login");
+            $this->redirect("__APP__/Home/Login/login");
         }
 //        if(!$this->_verifyCheck($verify_code)){
 //            $this->error("验证码错误！！！");

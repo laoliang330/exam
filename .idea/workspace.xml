@@ -35,8 +35,18 @@
       <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EXAM/Home/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.708333">
+            <state vertical-scroll-proportion="-42.5">
               <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EXAM/Home/Controller/LoginController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.18229167">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -76,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EXAM/Admin/View/Room/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.60553634">
+            <state vertical-scroll-proportion="-14.583333">
               <caret line="107" column="115" selection-start-line="107" selection-start-column="115" selection-end-line="107" selection-end-column="115" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
@@ -93,11 +103,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="debug.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EXAM/Home/Conf/debug.php">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EXAM/Home/View/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.875">
-              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exam.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exam.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,7 +179,6 @@
         <option value="$PROJECT_DIR$/EXAM/Admin/Controller/UsersController.class.php" />
         <option value="$PROJECT_DIR$/EXAM/Admin/Model/PaperViewModel.class.php" />
         <option value="$PROJECT_DIR$/EXAM/Admin/Controller/PaperController.class.php" />
-        <option value="$PROJECT_DIR$/EXAM/Home/Controller/LoginController.class.php" />
         <option value="$PROJECT_DIR$/EXAM/Admin/View/Adminlogin/login.html" />
         <option value="$PROJECT_DIR$/EXAM/Admin/Model/QuestionViewModel.class.php" />
         <option value="$PROJECT_DIR$/EXAM/Admin/View/Question/index.html" />
@@ -168,6 +197,7 @@
         <option value="$PROJECT_DIR$/A/memo" />
         <option value="$PROJECT_DIR$/EXAM/Home/Controller/GradeController.class.php" />
         <option value="$PROJECT_DIR$/EXAM/Admin/View/Room/index.html" />
+        <option value="$PROJECT_DIR$/EXAM/Home/Controller/LoginController.class.php" />
       </list>
     </option>
   </component>
@@ -227,6 +257,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="thinkphp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thinkphp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thinkphp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -413,18 +457,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/EXAM" />
       <recent name="$PROJECT_DIR$/Public/img" />
       <recent name="$PROJECT_DIR$/Public/jqueryeasyui" />
       <recent name="$PROJECT_DIR$/Public/sui/dist/js" />
       <recent name="$PROJECT_DIR$/Public/sui" />
-      <recent name="$PROJECT_DIR$/EXAM/Home/Model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/EXAM/Admin/View/Adminlogin" />
       <recent name="$PROJECT_DIR$/EXAM/Home/View/User" />
       <recent name="$PROJECT_DIR$/Public/jqueryeasyui" />
       <recent name="$PROJECT_DIR$/EXAM/Admin/Model/Org" />
-      <recent name="$PROJECT_DIR$/EXAM/Admin/View" />
     </key>
   </component>
   <component name="RunManager">
@@ -528,21 +572,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EXAM/Admin/View/Class/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47058824">
-          <caret line="211" column="31" selection-start-line="207" selection-start-column="28" selection-end-line="211" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/css/my.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EXAM/Admin/Model/PaperModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34083045">
@@ -795,14 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThinkPHP/Conf/convention.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -835,14 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EXAM/Home/Controller/LoginController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52249134">
-          <caret line="37" column="45" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/A/memo">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -858,14 +871,6 @@
           <folding>
             <element signature="n#style#0;n#span#0;n#if#0;n#if#0;n#h1#0;n#header#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EXAM/Home/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.708333">
-          <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -889,7 +894,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EXAM/Admin/View/Room/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60553634">
+        <state vertical-scroll-proportion="-14.583333">
           <caret line="107" column="115" selection-start-line="107" selection-start-column="115" selection-end-line="107" selection-end-column="115" />
           <folding>
             <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
@@ -899,6 +904,46 @@
             <element signature="n#style#0;n#input#0;n#div#4;n#form#0;n#div#2;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#1;n#div#4;n#form#0;n#div#2;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EXAM/Home/View/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exam.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EXAM/Home/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-42.5">
+          <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EXAM/Home/Controller/LoginController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18229167">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
