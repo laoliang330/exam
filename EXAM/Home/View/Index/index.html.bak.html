@@ -1,0 +1,136 @@
+<layout name="tpl/htmlHF" />
+<style type="text/css">
+    .infinite-scroll-preloader {
+        margin-top:-20px;
+    }
+</style>
+<script>
+    $(function(){
+
+        //因为使用Ajax加载页面，所以后续的子页面的js和css在入口页面加载并初始化。如放到子页面中，则事件失效
+        $(document).on("pageInit", function(e, pageId, $page) {
+
+            if(pageId == "start") {
+//                window.onbeforeunload = function(){
+//                    return "您的文章尚未保存！";
+//                }
+                var loading = false;
+                var maxItems = 100;
+                var itemsPerLoad = 10;
+//                $.get('__APP__/Home/Index/questionList', {roomId:'{$roomId}',paperId:'{$pageId}'}, function (result) {
+//                    alert(result);
+//                    if (result.length>0) {
+//
+//                        addItems(itemsPerLoad, 0);
+//
+//                    } else {
+//                        alert('fail');
+////                        $.messager.show({    // show error message
+////                            title: '提示',
+////                            msg: '操作失败！'
+////                        });
+//                    }
+//                    //$.init();
+//                });
+
+                function addItems(number, lastIndex) {
+                    var html = '';
+                    //alert('additem');
+
+
+
+                    for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
+                        html += '<li class="item-content"><div class="item-inner"><div class="item-title">Item ' + i + '</div></div></li>';
+                    }
+
+                    $('.list-container').append(html);
+
+                }
+
+
+                var lastIndex = 20;
+
+                $(document).on('infinite', '.infinite-scroll',function() {
+
+                    // 如果正在加载，则退出
+                    if (loading) return;
+
+                    // 设置flag
+                    loading = true;
+
+                    setTimeout(function() {
+                        loading = false;
+
+                        if (lastIndex >= maxItems) {
+                            $.detachInfiniteScroll($('.infinite-scroll'));
+                            $('.infinite-scroll-preloader').remove();
+                            return;
+                        }
+
+                        addItems(itemsPerLoad, lastIndex);
+                        lastIndex = $('.list-container li').length;
+                    }, 1000);
+                });
+            }
+        });
+
+        $.init();
+    });
+</script>
+<!-- page 容器 -->
+<div class="page">
+    <!-- 标题栏 -->
+    <header class="bar bar-nav">
+        <a class="icon icon-menu pull-left  open-panel"></a>
+        <a class="icon icon-me pull-right open-panel"></a>
+        <h1 class="title">标题</h1>
+    </header>
+
+    <!-- 工具栏 -->
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+            <span class="icon icon-home"></span>
+            <span class="tab-label">首页</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-star"></span>
+            <span class="tab-label">收藏</span>
+        </a>
+        <a class="tab-item" href="#">
+            <span class="icon icon-settings"></span>
+            <span class="tab-label">设置</span>
+        </a>
+    </nav>
+
+    <!-- 这里是页面内容区 -->
+    <div class="content">
+
+        <div class="content-block-title">当前开放考场列表</div>
+        <div class="list-block">
+            <ul>
+                <volist name="room" id="vo">
+                    <a class="item-content item-link" href="Index/detail/id/{$vo.id}">
+                        <div class="item-media"><i class="icon icon-lm-clock"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">{$vo.roomname}</div>
+                            <div class="item-after">进入</div>
+                        </div>
+                    </a>
+                </volist>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- popup, panel 等放在这里 -->
+<div class="panel-overlay"></div>
+<!-- Left Panel with Reveal effect -->
+<div class="panel panel-left panel-reveal">
+    <div class="content-block">
+        <p>这是一个侧栏</p>
+        <p></p>
+        <!-- Click on link with "close-panel" class will close panel -->
+        <p><a href="#" class="close-panel">关闭</a></p>
+    </div>
+</div>

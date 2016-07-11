@@ -1,0 +1,34 @@
+<layout name="tpl/htmlHF" />
+<table>
+    <tr>
+        <td>id:</td>
+        <td>{$data.id}</td>
+    </tr>
+    <tr>
+        <td>姓名：</td>
+        <td>{$data.name}</td>
+    </tr>
+    <tr>
+        <td>密码：</td>
+        <td>{$data.password}</td>
+    </tr>
+    <tr>
+        <td>内容：</td>
+        <td>{$data.memo}</td>
+    </tr>
+</table>
+
+<div class="weui_cells">
+    <volist name="list" id="data" offset="3" length='3' empty="暂时没有数据">
+    <div class="weui_cell">
+        <div class="weui_cell_bd weui_cell_primary">
+            <p>标题文字{$data.id}</p>
+        </div>
+        <div class="weui_cell_ft">
+            {$data.name}
+        </div>
+    </div>
+    </volist>
+
+</div>
+

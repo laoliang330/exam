@@ -1,0 +1,154 @@
+<layout name="tpl/htmlHF" />
+<script>
+
+
+    sTotal=parseInt({$timeLimit})*60;
+    forceEnd=parseInt({$forceEnd});
+    function startTime()
+    {
+        if(sTotal>0){
+            m=parseInt(sTotal/60);
+            s=parseInt(sTotal%60);
+            m=checkTime(m);
+            s=checkTime(s);
+            document.getElementById('countdown').innerHTML=m+":"+s;
+
+            t=setTimeout('startTime()',1000);
+            sTotal-=1;
+        }else{
+            if(forceEnd>0){
+                submitFm();
+
+            }
+        }
+    }
+
+    function checkTime(i)
+    {
+        if (i<10)
+        {i="0" + i}
+        return i
+    }
+</script>
+
+<div class="page-group">
+    <!-- 单个page ,第一个.page默认被展示-->
+    <div class="page" id="start">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+
+            <h1 class="title">
+                <if condition="($timeLimit GT 0)">
+                    <span id="countdown"></span>
+                    <script>
+                        startTime()
+                    </script>
+                    <if condition="($forceEnd GT 0)">
+                        <span style="color: red;font-size: small">(到时强制交卷)</span>
+                    </if>
+                </if>
+            </h1>
+            <button class="button button-fill button-danger pull-left" onclick="quitExamRoom()">
+                退出
+            </button>
+            <button class="button button-fill pull-right" onclick="submitExamRoom()">
+                交卷
+            </button>
+        </header>
+
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <form id="fmQuestionList" method="post">
+            <div class="list-block cards-list">
+                <ul>
+                    <volist name="questionList" id="vo" key="k">
+                    <li class="card">
+                        <div class="card-header"><span id="span{$vo.questionidselected}">{$k}、{$vo.questionnameseleted}</span></div>
+                        <div class="card-content">
+                            <div class="card-content-inner">题目内容：{$vo.questioncontent}</div>
+                        </div>
+                        <div id="textarea{$vo.questionidselected}" style="background-color :lightgrey" class="card-footer">
+                            <textarea cols="40" rows="8" name="answer[]" id="{$vo.questionidselected}" onblur="setcolor($(this))" placeholder="请填写答案。多个答案直接使用 ‘/’ 进行分隔"></textarea>
+                            <input type="hidden" name='questionId[]' value="{$vo.questionidselected}">
+                        </div>
+                    </li>
+                    </volist>
+                </ul>
+            </div>
+                <input type="hidden" id='roomId' name="roomId" value="{$roomId}">
+                <input type="hidden" id='paperId' name="paperId" value="{$paperId}">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function setcolor(item){
+        var spanid='#span'+item.attr('id');
+        var textareaid='#textarea'+item.attr('id');
+        if($.trim(item.val())){
+            $(spanid).css('color','red');
+            $(textareaid).removeAttr('style');
+        }else{
+            $(spanid).removeAttr('style');
+            $(textareaid).css('background-color','lightgrey');
+        }
+
+    }
+
+    //防止用户点击浏览器后退按钮退出考试
+    $(document).ready(function(e) {
+        var counter = 0;
+        if (window.history && window.history.pushState) {
+            $(window).on('popstate', function () {
+                window.history.pushState('forward', null, '#');
+                window.history.forward(1);
+                //$("#label").html("第" + (++counter) + "次单击后退按钮。");
+            });
+        }
+        window.history.pushState('forward', null, '#'); //在IE中必须得有这两行
+        window.history.forward(1);
+    });
+
+    function quitExamRoom(){
+        $.confirm('退出考试将不保存答题结果！您确定要退出吗？',
+                function () {
+                    $.router.load("__APP__/Home/");
+                },
+                function () {
+                    $.toast("请继续答题！");
+                });
+    }
+
+    function submitFm(){
+        $.post('__APP__/Home/Grade/Index',
+                $('#fmQuestionList').serialize(),
+                function(response){
+                    if(response==0){
+                        $.toast("交卷失败！请再试一次或联系管理员！");
+                    }
+                    if(response==1){
+                        $.toast("交卷成功！已提交老师判卷。");
+                        $.router.load("__APP__/Home/");
+                    }
+                    if(response==-1){
+                        $.toast("系统错误，请再试一次或联系管理员！。");
+                    }
+                })
+    }
+
+    function submitExamRoom(){
+        $.confirm("确定答题完毕并交卷吗？",
+                function() {
+                    submitFm();
+                },
+                function(){
+                    $.toast("请继续答题！");
+                });
+
+    }
+
+
+</script>

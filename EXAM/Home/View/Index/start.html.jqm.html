@@ -1,0 +1,46 @@
+<layout name="tpl/htmlHF" />
+<script>
+    function setcolor(item){
+        var spanid='#span'+item.attr('id');
+        if($.trim(item.val())){
+            $(spanid).css('color','red');
+        }else{
+            $(spanid).removeAttr('style');
+        }
+
+    }
+</script>
+<div data-role="page" id="start">
+    <div data-role="header" data-position="fixed">
+        <a href="#" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-delete">退出</a>
+        <h1></h1>
+        <a href="#" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-check">交卷</a>
+    </div>
+    <div role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true" data-divider-theme="a">
+            <volist name="questionList" id="vo">
+            <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" >
+                <h4><span id="span{$vo.questionidselected}">{$vo.questionnameseleted}</span></h4>
+                <table data-role="table" id="table-question" data-mode="reflow" class="ui-responsive table-stroke">
+                    <thead>
+                        <tr>
+                        </tr>
+                    </thead>     
+                    <tbody>
+                       <tr>
+                             <td>题目内容：{$vo.questioncontent}</td>
+                           </tr>
+                       <tr>
+                             <td>题目类型：{$vo.typename}</td>
+                       </tr>
+                       <tr>
+                             <td><textarea cols="40" rows="8" name="{$vo.questionidselected}" id="{$vo.questionidselected}" onblur="setcolor($(this))" placeholder="请填写答案。多个答案直接使用 ‘/’ 进行分隔"></textarea></td>
+                       </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            </volist>
+        </ul>
+    </div><!-- /content -->
+</div><!-- /page -->

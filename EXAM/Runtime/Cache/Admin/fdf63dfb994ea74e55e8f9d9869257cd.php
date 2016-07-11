@@ -1,0 +1,474 @@
+<?php if (!defined('THINK_PATH')) exit();?>
+<table id="dgRoom" title="考场管理" class="easyui-datagrid ContextMenu"
+       data-options="
+            url:'/thinkphp/index.php/Admin/Room/roomList',
+            singleSelect: true,
+            onRowContextMenu: onRowContextMenu,
+            fitColumns:true,
+            rownumbers:true,
+            pagination:true
+       "
+       toolbar="#toolbarRoom">
+    <thead>
+    <tr>
+        <th field="roomname" editor="{type:'text',options:{required:true}}"  width="50">考场名称</th>
+        <th field="starttime">开始时间</th>
+        <th field="endtime">结束时间</th>
+        <th field="timelimit">时间限制</th>
+        <th field="papername">所选试卷</th>
+        <th field="userrange">人员范围</th>
+        <th field="forceend">强制结束</th>
+        <th field="status">当前状态</th>
+        <th field="username">创建人</th>
+        <th field="createtime">创建时间</th>
+    </tr>
+    </thead>
+</table>
+<div id="toolbarRoom">
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newExamRoom(0)">新建</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="newExamRoom(1)">编辑</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyExamRoom()">删除</a>
+</div>
+
+<div id="mmRoom" class="easyui-menu" style="width:120px;">
+    <div onclick="newExamRoom(0)" data-options="iconCls:'icon-add'">添加考场</div>
+    <div class="menu-sep"></div>
+    <div onclick="newExamRoom(1)" data-options="iconCls:'icon-edit'">编辑考场</div>
+    <div class="menu-sep"></div>
+    <div onclick="destroyExamRoom()" data-options="iconCls:'icon-remove'">删除考场</div>
+</div>
+
+<div id="dlgexamroom" class="easyui-dialog" data-options="iconCls:'icon-save',modal:true"
+     closed="true" buttons="#dlgExam-buttons" style="width: 600px">
+    <div class="ftitle">请填写考场信息</div>
+    <form id="fmRoom" method="post" validate>
+        <div class="fitem">
+            <label>考场名称:</label>
+            <input name="roomName"  id="roomName" class="easyui-textbox" required="true" missingMessage="必填">
+        </div>
+        <div class="fitem">
+            <label>选择试卷:</label>
+            <select id='paper' name='paper' class="easyui-combogrid"  data-options="
+
+                    idField: 'id',
+                    textField: 'papername',
+                    url: '/thinkphp/index.php/Admin/Paper/paperList',
+                    method: 'get',
+                    columns: [[
+                        {field:'papername',title:'试卷名称',width:120},
+
+                    ]],
+                    fitColumns: true
+                ">
+            </select>
+        </div>
+        <div class="fitem">
+            <label>自动组卷:</label>
+            <input class="easyui-switchbutton" name="paperAuto" id="paperAuto" data-options="onText:'开启',offText:'关闭'" style="width:100px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            卷面总分:<input class="easyui-numberspinner" id='gradeTotalAuto' name='gradeTotalAuto'  value="0"  min="1" style="width: 80px">
+
+        </div>
+        <div class="fitem">
+            <label>题目数量:</label>
+            单选:<input class="easyui-numberspinner" id='questionType2' name='questionType2'  value="0"  min="0" max="100" style="width: 90px">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            多选:<input class="easyui-numberspinner" id='questionType3' name='questionType3'  value="0"  min="0" max="100" style="width: 90px">
+        </div>
+        <div class="fitem">
+            <label>题目数量:</label>
+            填空:<input class="easyui-numberspinner" id='questionType1' name='questionType1'  value="0"  min="0" max="100" style="width: 90px">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            问答:<input class="easyui-numberspinner" id='questionType4' name='questionType4'  value="0"  min="0" max="100" style="width: 90px">
+        </div>
+        <div class="fitem">
+            <label>开始时间:</label>
+            <input class="easyui-datebox" name="startTime" id="startTime" data-options="
+                     formatter: function(date){
+                                    var y = date.getFullYear();
+                                    var m = date.getMonth()+1;
+                                    var d = date.getDate();
+                                    return y+'-'+m+'-'+d;
+                                }
+            ">
+        </div>
+        <div class="fitem">
+            <label>结束时间:</label>
+            <input class="easyui-datebox" name="endTime" id="endTime"  data-options="
+                     formatter: function(date){
+                                    var y = date.getFullYear();
+                                    var m = date.getMonth()+1;
+                                    var d = date.getDate();
+                                    return y+'-'+m+'-'+d;
+                                }
+            ">
+        </div>
+        <div class="fitem">
+            <label>时间限制:</label>
+            <input class="easyui-numberspinner" name='timeLimit' id="timeLimit" value="0" data-options="increment:1,editable:false" min="0" max="120">
+        </div>
+        <div class="fitem">
+            <label>人员范围:</label>
+            <input id="userRange1" name="userRange1" id="userRange1" class="easyui-combotree">
+            <input type="hidden" id="userRange" name="userRange" value="">
+        </div>
+        <div class="fitem">
+            <label>及格分数:</label>
+            <input class="easyui-numberspinner" name='passScore' id="passScore" value="60" data-options="increment:5,editable:false" min="0">
+        </div>
+        <div class="fitem">
+            <label>相关选项:</label>
+            <input class="easyui-switchbutton" name="forceEnd" id="'forceEnd" data-options="onText:'强制结束',offText:'允许超时'" style="width:100px;">
+            <input class="easyui-switchbutton" name="status" id="'status" data-options="onText:'开放状态',offText:'锁定状态'"  style="width:100px;">
+
+        </div>
+
+        <div class="fitem">
+            <label>备注说明:</label>
+            <input class="easyui-textbox" name="memo" id="memo" data-options="multiline:true,height:44" />
+        </div>
+            <input type="hidden" id="op" name="op" value="add">
+            <input type="hidden" id="id" name="id" value="0">
+    </form>
+
+</div>
+<div id="dlgExam-buttons">
+    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveExamRoom()">保存</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlgexamroom').dialog('close')" style="width:90px">取消</a>
+</div>
+
+<script>
+    var myurl;
+    //var room=<?php echo ($Room); ?>;
+    //var roomList=<?php echo ($roomList); ?>;
+    var rowIndex;
+
+    function onRowContextMenu(e,index,row){
+        if (row){
+            e.preventDefault();
+            $(this).datagrid('selectRow', index);
+            $('#mmRoom').menu('show',{
+                left: e.pageX,
+                top: e.pageY
+            });
+        }
+    }
+
+
+
+
+    function newExamRoom(i){
+        var msg;
+        if(i==0){
+            msg='新建考场';
+            $('#dlgexamroom').dialog('open').dialog('center').dialog('setTitle',msg);
+
+            $('#fmRoom').form('clear');
+            $('#op').val('add');
+
+        }
+        if(i==1){
+            msg='编辑考场';
+            row = $('#dgRoom').datagrid('getSelected');
+            if(!row){
+                myalert('请选择要编辑的考场！');
+            }else{
+                $('#dlgexamroom').dialog('open').dialog('center').dialog('setTitle',msg);
+                row = $('#dgRoom').datagrid('getSelected');
+                if(row.forceend==1){
+                    fesb='on';
+                }else{
+                    fesb='';
+                }
+                if(row.status==1){
+                    ssbr='on';
+                }else{
+                    ssbr='';
+                }
+                if(row.paperauto==1){
+                    pau='on';
+                }else{
+                    pau='';
+                }
+
+                $('#fmRoom').form('load',{
+                    roomName:row.roomname,
+                    paper:row.paper,
+                    startTime:row.starttime,
+                    endTime:row.endtime,
+                    timeLimit:row.timelimit,
+                    userRange1:row.userrange.split(','),
+                    memo:row.memo,
+                    forceEnd:fesb,
+                    status:ssbr,
+                    op:'edit',
+                    id:row.id,
+                    paperAuto:pau,
+                    questionHowMany:row.questionhowmany,
+                    questionType1:row.questiontype1,
+                    questionType2:row.questiontype2,
+                    questionType3:row.questiontype3,
+                    questionType4:row.questiontype4,
+                });
+            }
+        }
+        myurl = '/thinkphp/index.php/Admin/Room/save';
+    }
+
+    function saveExamRoom(){
+        //alert($("#userRange").combotree("getValues"));
+        $('#userRange').val($("#userRange1").combotree("getValues"));
+        $('#fmRoom').form('submit',{
+            url: '/thinkphp/index.php/Admin/Room/save',
+            onSubmit: function(){
+                return $(this).form('validate');
+            },
+            success: function(result){
+                //alert(result);
+                if (result>0){
+                    $.messager.show({
+                        msg:'操作成功！',
+                        timeout:2000,
+                        showType:'slide'
+                    });
+                    $('#dlgexamroom').dialog('close');        // close the dialog
+                    $('#dgRoom').datagrid('reload');    // reload the user data
+                    $('#paper').combogrid('grid').datagrid('load');
+                } else {
+                    $.messager.alert('提示',result,'info');
+                }
+            }
+        });
+    }
+
+
+    function destroyExamRoom() {
+        var row = $('#dgRoom').datagrid('getSelected');
+        if (row) {
+            $.messager.confirm('提示','确定删除?', function (r) {
+                if (r) {
+                    $.post('/thinkphp/index.php/Admin/Room/destroy', {id: row.id}, function (result) {
+                        if (result) {
+                            $.messager.show({
+                                msg:'操作成功！',
+                                timeout:2000,
+                                showType:'slide'
+                            });
+                            $('#dgRoom').datagrid('reload');    // reload the user data
+                        } else {
+                            $.messager.show({    // show error message
+                               title: '提示',
+                             msg: '删除失败！'
+                            });
+                        }
+                    }, 'json');
+                }
+            });
+        }
+    }
+
+    $(function () {
+        
+        $('#userRange1').combotree
+        ({  url: '/thinkphp/index.php/Admin/Room/userRange',
+            valueField: 'id',
+            textField: 'name',
+            editable: false,
+            multiple:true,
+            loadFilter: function(rows){
+                //alert(convert(rows));
+                return convert(rows);
+            },
+            onClick: function (node) {
+               // JJ.Prm.GetDepartmentUser(node.id, 'selUserFrom');
+            }, //全部折叠
+            onLoadSuccess: function (node, data) {
+                //$('#selDepartmentFrom').combotree('tree').tree("collapseAll");
+            }
+        });
+    });
+
+    function convert(rows){
+        function exists(rows, parentid){
+            for(var i=0; i<rows.length; i++){
+                if (rows[i].id == parentid) return true;
+            }
+            return false;
+        }
+
+        var nodes = [];
+        // 得到顶层节点
+        for(var i=0; i<rows.length; i++){
+            var row = rows[i];
+            if (!exists(rows, row.parentid)){
+                nodes.push({
+                    id:row.id,
+                    text:row.name
+                });
+            }
+        }
+
+        var toDo = [];
+        for(var i=0; i<nodes.length; i++){
+            toDo.push(nodes[i]);
+        }
+        while(toDo.length){
+            var node = toDo.shift();    // 父节点
+            // 得到子节点
+            for(var i=0; i<rows.length; i++){
+                var row = rows[i];
+                if (row.parentid == node.id){
+                    var child = {id:row.id,text:row.name};
+                    if (node.children){
+                        node.children.push(child);
+                    } else {
+                        node.children = [child];
+                    }
+                    toDo.push(child);
+                }
+            }
+        }
+        return nodes;
+    }
+    function getComboValue(){
+        var t = $('#userRange1').combotree('tree');	// get the tree object
+        var n = t.tree('getChecked');		// get selected node
+        //alert($("#userRange1").combotree("getValues"));
+    }
+
+
+    function getRowIndex(target){
+        var tr = $(target).closest('tr.datagrid-row');
+        return parseInt(tr.attr('datagrid-row-index'));
+    }
+
+    function formatDate(date){
+        //alert(date);
+        return date.split(' ')[0];
+        //alert(arr[2]);
+//        var datetime =
+//                arr[1]
+//                + "/"// "月"
+//                + arr[2]
+//                +"/"
+//                +arr[0]// "年"
+        //alert(datetime);
+    }
+
+    function validateQuestionType(obj){
+        if($('#questionType1').numberspinner('getValue')){
+            qt1=parseInt($('#questionType1').numberspinner('getValue'));
+        }else{
+            qt1=0;
+        }
+        if($('#questionType2').numberspinner('getValue')){
+            qt2=parseInt($('#questionType2').numberspinner('getValue'));
+        }else{
+            qt2=0;
+        }
+        if($('#questionType3').numberspinner('getValue')){
+            qt3=parseInt($('#questionType3').numberspinner('getValue'));
+        }else{
+            qt3=0;
+        }
+        if($('#questionType4').numberspinner('getValue')){
+            qt4=parseInt($('#questionType4').numberspinner('getValue'));
+        }else{
+            qt4=0;
+        }
+
+        var rate=qt1+qt2+qt3+qt4;
+        if(rate>100){
+           obj.numberspinner('setValue',0);
+            $.messager.alert('提示','题目类型合计不能超过100%！','info');
+        }
+        if($('#questionHowMany').numberspinner('getValue')){
+            qhm=parseInt($('#questionHowMany').numberspinner('getValue'));
+        }else{
+            qhm=0;
+        }
+        if(qt1>0){
+            qhmmin1=1;
+        }else{
+            qhmmin1=0;
+        }
+        if(qt2>0){
+            qhmmin2=1;
+        }else{
+            qhmmin2=0;
+        }
+        if(qt3>0){
+            qhmmin3=1;
+        }else{
+            qhmmin3=0;
+        }
+        if(qt4>0){
+            qhmmin4=1;
+        }else{
+            qhmmin4=0;
+        }
+
+        if(qhm<(qhmmin1+qhmmin2+qhmmin3+qhmmin4)){
+            $('#questionHowMany').numberspinner('setValue',(qhmmin1+qhmmin2+qhmmin3+qhmmin4));
+        }
+    }
+
+</script>
+
+<!--
+<script type="text/javascript">
+    var url;
+    function newExamRoom(){
+        $('#dlg').dialog('open').dialog('center').dialog('setTitle','新建考场');
+        $('#fm').form('clear');
+        url = 'save_user.php';
+    }
+    function editUser(){
+        var row = $('#dgRoom').datagrid('getSelected');
+        if (row){
+            $('#dlg').dialog('open').dialog('center').dialog('setTitle','Edit User');
+            $('#fm').form('load',row);
+            url = 'update_user.php?id='+row.id;
+        }
+    }
+    function saveUser(){
+        $('#fm').form('submit',{
+            url: url,
+            onSubmit: function(){
+                return $(this).form('validate');
+            },
+            success: function(result){
+                var result = eval('('+result+')');
+                if (result.errorMsg){
+                    $.messager.show({
+                        title: 'Error',
+                        msg: result.errorMsg
+                    });
+                } else {
+                    $('#dlg').dialog('close');        // close the dialog
+                    $('#dgRoom').datagrid('reload');    // reload the user data
+                }
+            }
+        });
+    }
+    function destroyUser(){
+        var row = $('#dgRoom').datagrid('getSelected');
+        if (row){
+            $.messager.confirm('Confirm','Are you sure you want to destroy this user?',function(r){
+                if (r){
+                    $.post('destroy_user.php',{id:row.id},function(result){
+                        if (result.success){
+                            $('#dgRoom').datagrid('reload');    // reload the user data
+                        } else {
+                            $.messager.show({    // show error message
+                                title: 'Error',
+                                msg: result.errorMsg
+                            });
+                        }
+                    },'json');
+                }
+            });
+        }
+    }
+</script>
+-->

@@ -1,0 +1,1535 @@
+[ 2016-07-08T10:48:22+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Class/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008990s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009078s ]
+SQL: SHOW COLUMNS FROM `exam_class` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0608s ]
+SQL: SELECT Class.id AS id,Class.className AS className,Class.memo AS memo,Class.ownerId AS ownerId,Class.createTime AS createTime,Class.status AS status,Class.ratedScore AS ratedScore,Class.ratedTime AS ratedTime,Class.classAttach AS classAttach,Users.id AS userid,Users.username AS username FROM exam_class Class  JOIN exam_users Users ON Users.id=Class.ownerId WHERE `inUse` = 1 AND Class.status = 1 ORDER BY Class.id desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Use of undefined constant ratedscore - assumed 'ratedscore' /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Home/acc8c578b0391c08a7b5111e3a572664.php 第 66 行.
+NOTIC: [8] Use of undefined constant ratedtime - assumed 'ratedtime' /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Home/acc8c578b0391c08a7b5111e3a572664.php 第 66 行.
+NOTIC: [8] Use of undefined constant ratedscore - assumed 'ratedscore' /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Home/acc8c578b0391c08a7b5111e3a572664.php 第 66 行.
+NOTIC: [8] Use of undefined constant ratedtime - assumed 'ratedtime' /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Home/acc8c578b0391c08a7b5111e3a572664.php 第 66 行.
+NOTIC: [8] Use of undefined constant ratedscore - assumed 'ratedscore' /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Home/acc8c578b0391c08a7b5111e3a572664.php 第 66 行.
+NOTIC: [8] Use of undefined constant ratedtime - assumed 'ratedtime' /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Home/acc8c578b0391c08a7b5111e3a572664.php 第 66 行.
+NOTIC: [8] Use of undefined constant ratedscore - assumed 'ratedscore' /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Home/acc8c578b0391c08a7b5111e3a572664.php 第 66 行.
+NOTIC: [8] Use of undefined constant ratedtime - assumed 'ratedtime' /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Home/acc8c578b0391c08a7b5111e3a572664.php 第 66 行.
+NOTIC: [8] Use of undefined constant ratedscore - assumed 'ratedscore' /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Home/acc8c578b0391c08a7b5111e3a572664.php 第 66 行.
+NOTIC: [8] Use of undefined constant ratedtime - assumed 'ratedtime' /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Home/acc8c578b0391c08a7b5111e3a572664.php 第 66 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.138464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.138511s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.044477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.044530s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015535s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015586s ]
+
+[ 2016-07-08T10:48:27+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068299s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000544s ]
+
+[ 2016-07-08T10:48:32+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/detail/id/33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0682s ]
+SQL: SELECT * FROM `exam_room` WHERE ( id=33 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: forceEnd /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/IndexController.class.php 第 35 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042831s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000463s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000507s ]
+
+[ 2016-07-08T10:48:34+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/detail/id/33
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `exam_room` WHERE ( id=33 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: forceEnd /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/IndexController.class.php 第 35 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020181s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2016-07-08T10:48:37+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/start/roomId/33/paperId/15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.5354s ]
+SQL: SHOW COLUMNS FROM `exam_questionselected` [ RunTime:0.0584s ]
+SQL: SHOW COLUMNS FROM `exam_questiontype` [ RunTime:0.0276s ]
+SQL: SELECT Question.questionName AS questionNameSeleted,Question.questionContent AS questionContent,Question.questionHowMany AS questionHowMany,Question.questionType AS questionType,Questionselected.id AS questionIdSelected,Questionselected.questionId AS questionId,Questionselected.paperId AS paperId,Questiontype.typeName AS typeName FROM exam_question Question  JOIN exam_questionselected Questionselected ON Question.id=Questionselected.questionId  JOIN exam_questiontype Questiontype ON Questiontype.id=Question.questionType WHERE ( paperId=15 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104618s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104681s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2016-07-08T10:48:37+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/start/roomId/33/paperId/15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `exam_questionselected` [ RunTime:0.0494s ]
+SQL: SHOW COLUMNS FROM `exam_questiontype` [ RunTime:0.0098s ]
+SQL: SELECT Question.questionName AS questionNameSeleted,Question.questionContent AS questionContent,Question.questionHowMany AS questionHowMany,Question.questionType AS questionType,Questionselected.id AS questionIdSelected,Questionselected.questionId AS questionId,Questionselected.paperId AS paperId,Questiontype.typeName AS typeName FROM exam_question Question  JOIN exam_questionselected Questionselected ON Question.id=Questionselected.questionId  JOIN exam_questiontype Questiontype ON Questiontype.id=Question.questionType WHERE ( paperId=15 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027843s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027920s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000362s ]
+
+[ 2016-07-08T10:48:41+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL )  [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076787s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000533s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2016-07-08T10:48:41+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022686s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2016-07-08T12:32:26+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/detail/id/20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008997s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009060s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `exam_room` WHERE ( id=20 )  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: forceEnd /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/IndexController.class.php 第 35 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.134996s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.135081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.050109s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.050165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008210s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008253s ]
+
+[ 2016-07-08T12:32:26+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/detail/id/20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `exam_room` WHERE ( id=20 )  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: forceEnd /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/IndexController.class.php 第 35 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020289s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000323s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000351s ]
+
+[ 2016-07-08T12:32:30+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/start/roomId/20/paperId/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000704s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `exam_questionselected` [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `exam_questiontype` [ RunTime:0.0014s ]
+SQL: SELECT Question.questionName AS questionNameSeleted,Question.questionContent AS questionContent,Question.questionHowMany AS questionHowMany,Question.questionType AS questionType,Questionselected.id AS questionIdSelected,Questionselected.questionId AS questionId,Questionselected.paperId AS paperId,Questiontype.typeName AS typeName FROM exam_question Question  JOIN exam_questionselected Questionselected ON Question.id=Questionselected.questionId  JOIN exam_questiontype Questiontype ON Questiontype.id=Question.questionType WHERE ( paperId=7 )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2016-07-08T12:32:30+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/start/roomId/20/paperId/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `exam_questionselected` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `exam_questiontype` [ RunTime:0.0019s ]
+SQL: SELECT Question.questionName AS questionNameSeleted,Question.questionContent AS questionContent,Question.questionHowMany AS questionHowMany,Question.questionType AS questionType,Questionselected.id AS questionIdSelected,Questionselected.questionId AS questionId,Questionselected.paperId AS paperId,Questiontype.typeName AS typeName FROM exam_question Question  JOIN exam_questionselected Questionselected ON Question.id=Questionselected.questionId  JOIN exam_questiontype Questiontype ON Questiontype.id=Question.questionType WHERE ( paperId=7 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021234s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2016-07-08T12:32:52+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001420s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090978s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091083s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000455s ]
+
+[ 2016-07-08T12:32:52+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000396s ]
+
+[ 2016-07-08T14:14:18+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.022365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022429s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058742s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058814s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.025465s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.025520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000774s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000820s ]
+
+[ 2016-07-08T14:15:14+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Class/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016189s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017370s ]
+SQL: SHOW COLUMNS FROM `exam_class` [ RunTime:0.0277s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.1277s ]
+ERR: 1052:Column 'inUse' in where clause is ambiguous
+ [ SQL语句 ] : SELECT Class.id AS id,Class.className AS className,Class.memo AS memo,Class.ownerId AS ownerId,Class.createTime AS createTime,Class.status AS status,Class.ratedScore AS ratedScore,Class.ratedTime AS ratedTime,Class.classAttach AS classAttach,Users.id AS userid,Users.username AS username FROM exam_class Class  JOIN exam_users Users ON Users.id=Class.ownerId WHERE `inUse` = 1 AND Class.status = 1 ORDER BY Class.id desc 
+ERR: 1052:Column 'inUse' in where clause is ambiguous
+ [ SQL语句 ] : SELECT Class.id AS id,Class.className AS className,Class.memo AS memo,Class.ownerId AS ownerId,Class.createTime AS createTime,Class.status AS status,Class.ratedScore AS ratedScore,Class.ratedTime AS ratedTime,Class.classAttach AS classAttach,Users.id AS userid,Users.username AS username FROM exam_class Class  JOIN exam_users Users ON Users.id=Class.ownerId WHERE `inUse` = 1 AND Class.status = 1 ORDER BY Class.id desc 
+
+[ 2016-07-08T14:15:20+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/room/roomlist/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+ERR: 非法操作:roomlist
+
+[ 2016-07-08T14:15:57+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/room/roomlist/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015528s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012705s ]
+ERR: 非法操作:roomlist
+
+[ 2016-07-08T14:15:59+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/room/roomlist/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+ERR: 非法操作:roomlist
+
+[ 2016-07-08T14:16:26+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/room/roomlist/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+ERR: 非法操作:roomlist
+
+[ 2016-07-08T14:17:02+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/room/roomlist/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+ERR: 非法操作:roomlist
+
+[ 2016-07-08T14:17:33+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.039454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.039516s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.197999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.198072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.016002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016052s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.025402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.025455s ]
+
+[ 2016-07-08T14:17:34+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Class/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `exam_class` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0016s ]
+ERR: 1052:Column 'inUse' in where clause is ambiguous
+ [ SQL语句 ] : SELECT Class.id AS id,Class.className AS className,Class.memo AS memo,Class.ownerId AS ownerId,Class.createTime AS createTime,Class.status AS status,Class.ratedScore AS ratedScore,Class.ratedTime AS ratedTime,Class.classAttach AS classAttach,Users.id AS userid,Users.username AS username FROM exam_class Class  JOIN exam_users Users ON Users.id=Class.ownerId WHERE `inUse` = 1 AND Class.status = 1 ORDER BY Class.id desc 
+ERR: 1052:Column 'inUse' in where clause is ambiguous
+ [ SQL语句 ] : SELECT Class.id AS id,Class.className AS className,Class.memo AS memo,Class.ownerId AS ownerId,Class.createTime AS createTime,Class.status AS status,Class.ratedScore AS ratedScore,Class.ratedTime AS ratedTime,Class.classAttach AS classAttach,Users.id AS userid,Users.username AS username FROM exam_class Class  JOIN exam_users Users ON Users.id=Class.ownerId WHERE `inUse` = 1 AND Class.status = 1 ORDER BY Class.id desc 
+
+[ 2016-07-08T14:17:35+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019720s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019782s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000328s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000359s ]
+
+[ 2016-07-08T14:17:37+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/detail/id/20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000073s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0532s ]
+SQL: SELECT * FROM `exam_room` WHERE ( id=20 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: forceEnd /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/IndexController.class.php 第 35 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070184s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000353s ]
+
+[ 2016-07-08T14:17:38+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/detail/id/20
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000590s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `exam_room` WHERE ( id=20 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: forceEnd /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/IndexController.class.php 第 35 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021460s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021513s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000321s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2016-07-08T14:17:40+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022235s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022290s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000143s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000399s ]
+
+[ 2016-07-08T14:33:23+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/user/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006189s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062022s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010644s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010716s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016382s ]
+
+[ 2016-07-08T14:33:24+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/user/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005594s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005634s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000329s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000360s ]
+
+[ 2016-07-08T14:33:25+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+
+[ 2016-07-08T14:33:26+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082797s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082850s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000316s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000344s ]
+
+[ 2016-07-08T14:33:26+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+NOTIC: [8] Undefined index:  /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/LoginController.class.php 第 44 行.
+
+[ 2016-07-08T14:33:26+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000335s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000374s ]
+
+[ 2016-07-08T14:33:33+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/checkLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0662s ]
+SQL: SELECT * FROM `exam_users` WHERE `userName` = 'admin' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: parentId /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/LoginController.class.php 第 38 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000383s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000417s ]
+
+[ 2016-07-08T14:33:34+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000572s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) )  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018128s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+
+[ 2016-07-08T14:35:14+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.020219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020329s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0929s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.093265s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.093324s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.018049s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.018113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016473s ]
+
+[ 2016-07-08T14:37:16+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009594s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009644s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070924s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.008442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008481s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002147s ]
+
+[ 2016-07-08T14:37:17+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000316s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0194s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021121s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021194s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000159s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000519s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2016-07-08T14:37:35+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022275s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022343s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2016-07-08T15:23:38+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007852s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079617s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.027924s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.027989s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000793s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2016-07-08T15:24:11+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.097463s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.097520s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000510s ]
+
+[ 2016-07-08T15:24:17+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000285s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021583s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021638s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000323s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000354s ]
+
+[ 2016-07-08T15:25:06+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/user/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065272s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007483s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.027582s ]
+INFO: [ app_end ] --END-- [ RunTime:0.027630s ]
+
+[ 2016-07-08T15:25:06+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/user/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000326s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2016-07-08T15:25:09+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+
+[ 2016-07-08T15:25:09+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014028s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000528s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000578s ]
+
+[ 2016-07-08T15:25:10+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8] Undefined index:  /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/LoginController.class.php 第 44 行.
+
+[ 2016-07-08T15:25:10+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004504s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000329s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000369s ]
+
+[ 2016-07-08T15:25:14+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/checkLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `exam_users` WHERE `userName` = 'yh1' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: parentId /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/LoginController.class.php 第 38 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040965s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000649s ]
+
+[ 2016-07-08T15:25:15+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000691s ]
+
+[ 2016-07-08T15:25:20+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/detail/id/43
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0414s ]
+SQL: SELECT * FROM `exam_room` WHERE ( id=43 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: forceEnd /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/IndexController.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046996s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047087s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000233s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000585s ]
+
+[ 2016-07-08T15:25:20+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/detail/id/43
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0462s ]
+SQL: SELECT * FROM `exam_room` WHERE ( id=43 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: forceEnd /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/IndexController.class.php 第 37 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020223s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020277s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000352s ]
+
+[ 2016-07-08T15:25:23+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/start/roomId/43/paperId/80
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `exam_questionselected` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `exam_questiontype` [ RunTime:0.0015s ]
+SQL: SELECT Question.questionName AS questionNameSeleted,Question.questionContent AS questionContent,Question.questionHowMany AS questionHowMany,Question.questionType AS questionType,Questionselected.id AS questionIdSelected,Questionselected.questionId AS questionId,Questionselected.paperId AS paperId,Questiontype.typeName AS typeName FROM exam_question Question  JOIN exam_questionselected Questionselected ON Question.id=Questionselected.questionId  JOIN exam_questiontype Questiontype ON Questiontype.id=Question.questionType WHERE ( paperId=80 )  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034122s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000682s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000748s ]
+
+[ 2016-07-08T15:25:23+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/start/roomId/43/paperId/80
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `exam_questionselected` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `exam_questiontype` [ RunTime:0.0021s ]
+SQL: SELECT Question.questionName AS questionNameSeleted,Question.questionContent AS questionContent,Question.questionHowMany AS questionHowMany,Question.questionType AS questionType,Questionselected.id AS questionIdSelected,Questionselected.questionId AS questionId,Questionselected.paperId AS paperId,Questiontype.typeName AS typeName FROM exam_question Question  JOIN exam_questionselected Questionselected ON Question.id=Questionselected.questionId  JOIN exam_questiontype Questiontype ON Questiontype.id=Question.questionType WHERE ( paperId=80 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021652s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021706s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2016-07-08T15:27:03+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009680s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0289s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+
+[ 2016-07-08T15:27:38+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006014s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null or userRange="" )  [ RunTime:0.0006s ]
+
+[ 2016-07-08T15:27:40+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+
+[ 2016-07-08T15:27:41+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+
+[ 2016-07-08T15:27:42+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+
+[ 2016-07-08T15:28:24+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009338s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060051s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007257s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016549s ]
+
+[ 2016-07-08T15:28:25+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/user/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018561s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000349s ]
+
+[ 2016-07-08T15:28:25+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/user/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006176s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000447s ]
+
+[ 2016-07-08T15:28:26+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+
+[ 2016-07-08T15:28:26+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034950s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034983s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000329s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000358s ]
+
+[ 2016-07-08T15:28:26+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+NOTIC: [8] Undefined index:  /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/LoginController.class.php 第 44 行.
+
+[ 2016-07-08T15:28:26+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000231s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000334s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000062s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022254s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022306s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000382s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2016-07-08T15:28:31+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/checkLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `exam_users` WHERE `userName` = 'yh1' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028309s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028379s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000161s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000348s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000392s ]
+
+[ 2016-07-08T15:28:32+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000331s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("33", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033096s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000513s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2016-07-08T15:28:44+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009404s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("33", userRange) or userRange is null or userRange="" )  [ RunTime:0.0006s ]
+
+[ 2016-07-08T15:33:54+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.016218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.028365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028436s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.1244s ]
+SQL: SELECT * FROM `exam_room` WHERE ( find_in_set("33", userRange) )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.608098s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.608178s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.019145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.019223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.017220s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017286s ]
+
+[ 2016-07-08T15:34:30+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000758s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `exam_room` WHERE ( find_in_set("33", userRange) or userRange is null or userRange="" )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080541s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080637s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.028842s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.028934s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005723s ]
+
+[ 2016-07-08T15:34:55+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("33", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035790s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035889s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2016-07-08T15:36:29+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/user/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005967s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050671s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050719s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.007333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007380s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.027514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.027575s ]
+
+[ 2016-07-08T15:36:29+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/user/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2016-07-08T15:36:30+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+
+[ 2016-07-08T15:36:30+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064745s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064780s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000323s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000350s ]
+
+[ 2016-07-08T15:36:31+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000475s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+NOTIC: [8] Undefined index:  /Users/liangming/webSite/thinkphp/EXAM/Home/Controller/LoginController.class.php 第 44 行.
+
+[ 2016-07-08T15:36:31+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000062s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004086s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000413s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2016-07-08T15:36:35+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Login/checkLogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `exam_users` WHERE `userName` = 'yh1' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035232s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000630s ]
+
+[ 2016-07-08T15:36:36+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("33", userRange) or userRange is null or userRange="" )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025108s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000143s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000404s ]
+
+[ 2016-07-08T15:39:09+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009156s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009207s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0159s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'userRange )' at line 1
+ [ SQL语句 ] : SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( 33 in userRange ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'userRange )' at line 1
+ [ SQL语句 ] : SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( 33 in userRange ) 
+
+[ 2016-07-08T15:39:23+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009233s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `exam_room` WHERE `inUse` = 1 AND `status` = 1 AND ( `startTime` <= '16-07-08' OR `startTime` IS NULL ) AND ( `endTime` >= '16-07-08' OR `endTime` IS NULL ) AND ( find_in_set("33", userRange) or userRange is null or userRange="" )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067372s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067458s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.017914s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.018001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016642s ]
+

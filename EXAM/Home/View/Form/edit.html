@@ -1,0 +1,20 @@
+<layout name="tpl/htmlHF" />
+<FORM method="post" name="form">
+    标题：<INPUT type="text" name="name" value="{$vo.name}"><br/>
+    密码：<INPUT type="text" name="password" value="{$vo.}"><br/>
+    内容：<TEXTAREA name="memo" rows="5" cols="45">{$vo.memo}</TEXTAREA><br/>
+    <INPUT type="hidden" name="id" value="{$vo.id}">
+    <INPUT type="submit" value="提交" onclick="editdata()"><INPUT type="submit" value="删除" onclick="deldata()">
+</FORM>
+<script>
+    function deldata(){
+        form.action='__URL__/deldata';
+        submit();
+    }
+    function editdata(){
+        form.action='__URL__/update';
+        submit();
+    }
+</script>
+
+

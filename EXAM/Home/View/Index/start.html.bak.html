@@ -1,0 +1,47 @@
+<!--<layout name="tpl/htmlHF" />-->
+
+
+<!-- page 容器 -->
+<div class="page" id="start">
+    <!-- 标题栏 -->
+    <header class="bar bar-nav">
+        <button class="button pull-left">
+            退出
+        </button>
+        <button class="button pull-right">
+            交卷
+        </button>
+        <h1 class="title">标题</h1>
+    </header>
+
+    <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+            Text
+        </a>
+        <a class="tab-item" href="#">
+            Text
+        </a>
+        <a class="tab-item" href="#">
+            Text
+        </a>
+    </nav>
+
+    <!-- 这里是页面内容区 -->
+
+        <div class="content infinite-scroll" data-distance="100">
+            <div class="list-block">
+                <ul class="list-container">
+                    <volist name="questionList" id="voq">
+                        <li class="item-content"><div class="item-inner"><div class="item-title">{$voq.questionnameseleted}</div></div></li>
+                    </volist>
+                </ul>
+            </div>
+            <!-- preloader -->
+            <div class="infinite-scroll-preloader">
+                <div class="preloader"></div>
+            </div>
+        </div>
+</div>
+<script>
+
+</script>

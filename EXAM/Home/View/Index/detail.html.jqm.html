@@ -1,0 +1,70 @@
+<layout name="tpl/htmlHF" />
+<div data-role="page" id="detail">
+    <div data-role="header" data-position="fixed">
+        <a href="" data-rel="back" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l ui-btn-icon-notext">信息</a>
+        <h1></h1>
+        <a href="#" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-user ui-btn-icon-notext">用户</a>
+    </div>
+    <div role="main" class="ui-content">
+        <table data-role="table" id="table-column-toggle" data-mode="reflow" class="ui-responsive table-stroke">
+             <thead>
+               <tr>
+                 <th data-priority="1">序号</th>
+                 <th data-priority="2">内容</th>
+                 <th data-priority="3">设置</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                     <th>1</th>
+                     <td>考场名称</td>
+                     <td>{$roomName}</td>
+                   </tr>
+               <tr>
+                     <th>2</th>
+                     <td>开放时间</td>
+                     <td>{$startTime}</td>
+                   </tr>
+               <tr>
+                     <th>3</th>
+                     <td>截止时间</td>
+                     <td>{$endTime}</td>
+                   </tr>
+               <tr>
+                     <th>4</th>
+                     <td>考试限时</td>
+                     <td>{$timeLimit}分钟</td>
+                   </tr>
+               <tr>
+                     <th>5</th>
+                     <td>及格分数</td>
+                     <td>{$passScore}</td>
+                   </tr>
+               <tr>
+
+                     <th>6</th>
+                     <td>允许超时</td>
+                     <td>{$forceEnd}</td>
+                   </tr>
+        </tbody>
+           </table>
+        <div class="ui-grid-solo">
+                <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li><a href="__APP__/Home/Index/start/roomId/{$roomId}/paperId/{$paperId}" data-icon="edit">开始考试</a></li>
+            </ul>
+        </div>
+        </div>
+    </div><!-- /content -->
+
+    <div data-role="footer"  data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home" class="ui-btn-active">首页</a></li>
+                <li><a href="__APP__/Home/Class/" data-icon="star" >课堂</a></li>
+                <li><a href="#" data-icon="gear">Setup</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+</div><!-- /page -->
+

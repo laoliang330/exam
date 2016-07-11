@@ -1,0 +1,19 @@
+<layout name="tpl/htmlHF" />
+
+<div id="dlgexamPaper" class="easyui-dialog"
+     closed="false" buttons="#dlglogin-buttons" closable="false" title="登录">
+    <form id="fmLogin" method="post" action="__APP__/Admin/Adminlogin/checkLogin" novalidate>
+        <div class="fitem">
+            <label>账号:</label>
+            <input name="username"  id="username" class="easyui-textbox" required="true" missingMessage="必填">
+        </div>
+        <div class="fitem">
+            <label>密码:</label>
+            <input name="password"  id="userpass" type="password" class="easyui-textbox" required="true" missingMessage="必填">
+        </div>
+    </form>
+</div>
+
+<div id="dlglogin-buttons">
+    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="$('#fmLogin').submit()">登录</a>
+</div>

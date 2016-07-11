@@ -1,0 +1,157 @@
+<layout name="tpl/htmlHF" />
+
+<div class="page-group">
+    <!-- 单个page ,第一个.page默认被展示-->
+    <div class="page">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+            <a class="icon icon-left pull-left back" href="#"></a>
+            <h1 class="title"></h1>
+            <a class="button  pull-right open-popup open-about" href="#">修改密码</a>
+            <a class="button  pull-right" href="__APP__/Home/Login/logout">退出</a>
+        </header>
+
+        <!-- 工具栏 -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external" href="__APP__/Home/">
+                <span class="icon icon-home"></span>
+                <span class="tab-label">首页</span>
+            </a>
+            <a class="tab-item external" href="__APP__/Home/Class/Index">
+                <span class="icon icon-star"></span>
+                <span class="tab-label">课堂</span>
+            </a>
+            <a class="tab-item external" href="#">
+                <span class="icon icon-app"></span>
+                <span class="tab-label">发现</span>
+            </a>
+        </nav>
+
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <div class="list-block media-list">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><img src="__ROOT__/Public/jqueryeasyui/themes/icons/man.png" style='width: 2.2rem;'></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">账号：{$username}</div>
+                                </div>
+                                <div class="item-subtitle">角色：{$userrole}</div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="list-block">
+                <ul>
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-edit"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">参加过的考试</div>
+                        </div>
+                    </li>
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-code"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">我的收藏</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="popup popup-about">
+        <div class="content">
+            <div class="list-block">
+                <form action="" method="post" id="changePassFm">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-password"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">原密码</div>
+                                <div class="item-input">
+                                    <input type="password" name="oldPass" placeholder="原密码" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-password"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">新密码</div>
+                                <div class="item-input">
+                                    <input type="password" name="newPass" placeholder="新密码" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-password"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label">再次输入</div>
+                                <div class="item-input">
+                                    <input type="password" name="newPassConfirm" placeholder="再次确认" class="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                </form>
+            </div>
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-50"><a href="#" class="button button-big button-fill button-danger close-popup">取消</a></div>
+                    <div class="col-50"><a href="#" class="button button-big button-fill button-success" onclick="submitChangePassFm()">提交</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- popup, panel 等放在这里 -->
+    <div class="panel-overlay"></div>
+    <!-- Left Panel with Reveal effect -->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <p>这是一个侧栏</p>
+            <p></p>
+            <!-- Click on link with "close-panel" class will close panel -->
+            <p><a href="#" class="close-panel">关闭</a></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function submitChangePassFm(){
+        $.confirm("确定提交？",
+                function() {
+                    $.post('__APP__/Home/User/changePassWord',
+                            $('#changePassFm').serialize(),
+                            function(response){
+                                $.toast(response);
+                                $.popup.close();
+//                                if(response==0){
+//                                    $.toast("操作失败！请再试一次或联系管理员！");
+//                                }
+//                                if(response==1){
+//                                    $.toast("操作成功！下次可使用新密码登录。");
+//                                    $.popup.close();
+//                                }
+//                                if(response==-1){
+//                                    $.toast("系统错误，请再试一次或联系管理员！。");
+//                                }
+                            })
+                },
+                function(){
+                    $.toast("请继续答题！");
+                });
+
+    }
+</script>

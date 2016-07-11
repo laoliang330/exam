@@ -1,0 +1,533 @@
+[ 2016-06-28T09:16:48+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined variable: adminKaochang /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Admin/a1fb5ff002d6532f68fec278b877b467.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071527s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000377s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000413s ]
+
+[ 2016-06-28T09:16:52+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Room?_=1467076608660
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Undefined variable: Room /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Admin/fdf63dfb994ea74e55e8f9d9869257cd.php 第 131 行.
+NOTIC: [8] Undefined variable: roomList /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Admin/fdf63dfb994ea74e55e8f9d9869257cd.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041943s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000493s ]
+
+[ 2016-06-28T09:16:52+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Room/userRange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+NOTIC: [8] Use of undefined constant Org - assumed 'Org' /Users/liangming/webSite/thinkphp/EXAM/Admin/Controller/RoomController.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `exam_org` [ RunTime:0.0135s ]
+SQL: SELECT `id`,orgName as name,parentId as parentId FROM `exam_org`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000470s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000523s ]
+
+[ 2016-06-28T09:16:52+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Room/userRange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+NOTIC: [8] Use of undefined constant Org - assumed 'Org' /Users/liangming/webSite/thinkphp/EXAM/Admin/Controller/RoomController.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `exam_org` [ RunTime:0.0027s ]
+SQL: SELECT `id`,orgName as name,parentId as parentId FROM `exam_org`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
+
+[ 2016-06-28T09:16:52+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper/paperList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0706s ]
+SQL: SHOW COLUMNS FROM `exam_paper` [ RunTime:0.0044s ]
+SQL: SELECT Users.id AS userId,Users.username AS username,Paper.id AS id,Paper.paperName AS paperName,Paper.paperRule1 AS paperRule1,Paper.paperRule2 AS paperRule2,Paper.paperShare AS paperShare,Paper.status AS status,Paper.memo AS memo,Paper.createTime AS createTime FROM exam_users Users  JOIN exam_paper Paper ON Paper.ownerId=Users.id WHERE ( inUse=1 ) ORDER BY Paper.id desc  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000612s ]
+
+[ 2016-06-28T09:16:52+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Room/roomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000549s ]
+NOTIC: [8] Undefined index: validate /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1055 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1055 行.
+NOTIC: [8] Undefined index: auto /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `exam_paper` [ RunTime:0.0024s ]
+SQL: SELECT Room.id AS id,Room.roomName AS roomName,Room.paper AS paper,Room.startTime AS startTime,Room.endTime AS endTime,Room.userRange AS userRange,Room.timeLimit AS timeLimit,Room.forceEnd AS forceEnd,Room.memo AS memo,Room.ownerId AS ownerId,Room.createTime AS createTime,Room.status AS status,Users.id AS userid,Users.username AS username,Paper.id AS paperid,Paper.paperName AS paperName FROM exam_room Room  JOIN exam_users Users ON Users.id=Room.ownerId  JOIN exam_paper Paper ON Room.paper=paper.id ORDER BY Room.id desc  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000728s ]
+
+[ 2016-06-28T09:17:06+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Room/save
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000994s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001076s ]
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0032s ]
+NOTIC: [8] Undefined index: validate /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+SQL: SELECT * FROM `exam_room` WHERE `roomName` = '测试考场（一）' AND `id` <> '27' LIMIT 1   [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: auto /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: UPDATE `exam_room` SET `roomName`='测试考场（一）',`paper`='2',`startTime`='2016-6-23',`endTime`='2016-6-30',`timeLimit`='30',`userRange`='1,33,41,42',`memo`='测试考场备注',`forceEnd`='1',`status`='1' WHERE ( id=27 ) [ RunTime:0.0531s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.038212s ]
+INFO: [ app_end ] --END-- [ RunTime:0.038271s ]
+
+[ 2016-06-28T09:17:06+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Room/roomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+NOTIC: [8] Undefined index: validate /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1055 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1055 行.
+NOTIC: [8] Undefined index: auto /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `exam_paper` [ RunTime:0.0028s ]
+SQL: SELECT Room.id AS id,Room.roomName AS roomName,Room.paper AS paper,Room.startTime AS startTime,Room.endTime AS endTime,Room.userRange AS userRange,Room.timeLimit AS timeLimit,Room.forceEnd AS forceEnd,Room.memo AS memo,Room.ownerId AS ownerId,Room.createTime AS createTime,Room.status AS status,Users.id AS userid,Users.username AS username,Paper.id AS paperid,Paper.paperName AS paperName FROM exam_room Room  JOIN exam_users Users ON Users.id=Room.ownerId  JOIN exam_paper Paper ON Room.paper=paper.id ORDER BY Room.id desc  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000401s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000434s ]
+
+[ 2016-06-28T09:17:09+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper?_=1467076608661
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063559s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.023850s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.023903s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2016-06-28T09:17:09+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper/PaperList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000404s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0489s ]
+SQL: SHOW COLUMNS FROM `exam_paper` [ RunTime:0.0019s ]
+SQL: SELECT Users.id AS userId,Users.username AS username,Paper.id AS id,Paper.paperName AS paperName,Paper.paperRule1 AS paperRule1,Paper.paperRule2 AS paperRule2,Paper.paperShare AS paperShare,Paper.status AS status,Paper.memo AS memo,Paper.createTime AS createTime FROM exam_users Users  JOIN exam_paper Paper ON Paper.ownerId=Users.id WHERE ( inUse=1 ) ORDER BY Paper.id desc  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000459s ]
+
+[ 2016-06-28T09:17:09+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper/PaperList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `exam_paper` [ RunTime:0.0021s ]
+SQL: SELECT Users.id AS userId,Users.username AS username,Paper.id AS id,Paper.paperName AS paperName,Paper.paperRule1 AS paperRule1,Paper.paperRule2 AS paperRule2,Paper.paperShare AS paperShare,Paper.status AS status,Paper.memo AS memo,Paper.createTime AS createTime FROM exam_users Users  JOIN exam_paper Paper ON Paper.ownerId=Users.id WHERE ( inUse=1 ) ORDER BY Paper.id desc  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2016-06-28T09:17:18+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper/questionList/paperid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000687s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `exam_questionselected` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`questionId` FROM `exam_questionselected` WHERE ( paperId=2 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0016s ]
+SQL: SELECT `id`,`questionName` FROM `exam_question` WHERE ( inUse=1 ) AND `id` NOT IN ('15','16','14')  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000681s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000738s ]
+
+[ 2016-06-28T09:17:18+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper/questionSelected/paperid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0049s ]
+SQL: SHOW COLUMNS FROM `exam_questionselected` [ RunTime:0.0024s ]
+SQL: SELECT Question.questionName AS questionNameSeleted,Question.questioncontent AS questioncontent,Questionselected.id AS questionIdSelected,Questionselected.paperId AS paperId FROM exam_question Question  JOIN exam_questionselected Questionselected ON Question.id=Questionselected.questionId WHERE ( Questionselected.paperId=2 )  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2016-06-28T22:26:40+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+NOTIC: [8] Undefined variable: adminKaochang /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Admin/a1fb5ff002d6532f68fec278b877b467.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074458s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074530s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000324s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000352s ]
+
+[ 2016-06-28T22:26:41+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+NOTIC: [8] Undefined variable: adminKaochang /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Admin/a1fb5ff002d6532f68fec278b877b467.php 第 142 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009532s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009592s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000174s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000668s ]
+
+[ 2016-06-28T22:26:47+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Question?_=1467124001700
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046961s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000574s ]
+
+[ 2016-06-28T22:26:47+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Question/questionList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `exam_questiontype` [ RunTime:0.0019s ]
+SQL: SELECT Question.id AS id,Question.questionName AS questionName,Question.questionContent AS questionContent,Question.questionType AS questionType,Question.questionHowMany AS questionHowMany,Question.answer AS answer,Question.questionShare AS questionShare,Question.comment AS comment,Question.status AS status,Question.createTime AS createTime,Question.inUse AS inUse,Users.username AS username,Questiontype.typeName AS typeName FROM exam_question Question  JOIN exam_users Users ON Question.ownerId=Users.id  JOIN exam_questiontype Questiontype ON Question.questionType=Questiontype.id WHERE ( Question.inUse=1 ) ORDER BY Question.id desc  [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000507s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2016-06-28T22:26:48+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Question/questionList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0584s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `exam_questiontype` [ RunTime:0.0019s ]
+SQL: SELECT Question.id AS id,Question.questionName AS questionName,Question.questionContent AS questionContent,Question.questionType AS questionType,Question.questionHowMany AS questionHowMany,Question.answer AS answer,Question.questionShare AS questionShare,Question.comment AS comment,Question.status AS status,Question.createTime AS createTime,Question.inUse AS inUse,Users.username AS username,Questiontype.typeName AS typeName FROM exam_question Question  JOIN exam_users Users ON Question.ownerId=Users.id  JOIN exam_questiontype Questiontype ON Question.questionType=Questiontype.id WHERE ( Question.inUse=1 ) ORDER BY Question.id desc  [ RunTime:0.0009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000636s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000701s ]
+
+[ 2016-06-28T22:26:48+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Question/questionList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `exam_questiontype` [ RunTime:0.0015s ]
+SQL: SELECT Question.id AS id,Question.questionName AS questionName,Question.questionContent AS questionContent,Question.questionType AS questionType,Question.questionHowMany AS questionHowMany,Question.answer AS answer,Question.questionShare AS questionShare,Question.comment AS comment,Question.status AS status,Question.createTime AS createTime,Question.inUse AS inUse,Users.username AS username,Questiontype.typeName AS typeName FROM exam_question Question  JOIN exam_users Users ON Question.ownerId=Users.id  JOIN exam_questiontype Questiontype ON Question.questionType=Questiontype.id WHERE ( Question.inUse=1 ) ORDER BY Question.id desc  [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000433s ]
+
+[ 2016-06-28T22:27:24+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Question/save
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001116s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0040s ]
+NOTIC: [8] Undefined index: validate /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+SQL: SELECT * FROM `exam_question` WHERE `questionName` = '测试换行' LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: auto /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `exam_question` (`questionName`,`questionContent`,`answer`,`questionType`,`questionHowMany`,`status`,`comment`,`id`,`createTime`,`ownerId`,`questionShare`) VALUES ('测试换行','a
+b
+c
+d
+','a','1','1','1','','0','2016-06-28 22:27:24','10001','0') [ RunTime:0.0616s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016151s ]
+INFO: [ app_end ] --END-- [ RunTime:0.016245s ]
+
+[ 2016-06-28T22:27:24+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Question/questionList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `exam_questiontype` [ RunTime:0.0028s ]
+SQL: SELECT Question.id AS id,Question.questionName AS questionName,Question.questionContent AS questionContent,Question.questionType AS questionType,Question.questionHowMany AS questionHowMany,Question.answer AS answer,Question.questionShare AS questionShare,Question.comment AS comment,Question.status AS status,Question.createTime AS createTime,Question.inUse AS inUse,Users.username AS username,Questiontype.typeName AS typeName FROM exam_question Question  JOIN exam_users Users ON Question.ownerId=Users.id  JOIN exam_questiontype Questiontype ON Question.questionType=Questiontype.id WHERE ( Question.inUse=1 ) ORDER BY Question.id desc  [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000561s ]
+
+[ 2016-06-28T22:27:34+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper?_=1467124001702
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040440s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.020651s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020697s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000765s ]
+
+[ 2016-06-28T22:27:34+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper/PaperList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `exam_paper` [ RunTime:0.0022s ]
+SQL: SELECT Users.id AS userId,Users.username AS username,Paper.id AS id,Paper.paperName AS paperName,Paper.paperRule1 AS paperRule1,Paper.paperRule2 AS paperRule2,Paper.paperShare AS paperShare,Paper.status AS status,Paper.memo AS memo,Paper.createTime AS createTime FROM exam_users Users  JOIN exam_paper Paper ON Paper.ownerId=Users.id WHERE ( inUse=1 ) ORDER BY Paper.id desc  [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000446s ]
+
+[ 2016-06-28T22:27:35+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper/PaperList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `exam_paper` [ RunTime:0.0018s ]
+SQL: SELECT Users.id AS userId,Users.username AS username,Paper.id AS id,Paper.paperName AS paperName,Paper.paperRule1 AS paperRule1,Paper.paperRule2 AS paperRule2,Paper.paperShare AS paperShare,Paper.status AS status,Paper.memo AS memo,Paper.createTime AS createTime FROM exam_users Users  JOIN exam_paper Paper ON Paper.ownerId=Users.id WHERE ( inUse=1 ) ORDER BY Paper.id desc  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000422s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2016-06-28T22:27:45+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper/questionList/paperid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+SQL: SHOW COLUMNS FROM `exam_questionselected` [ RunTime:0.2749s ]
+SQL: SELECT `id`,`questionId` FROM `exam_questionselected` WHERE ( paperId=2 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0017s ]
+SQL: SELECT `id`,`questionName` FROM `exam_question` WHERE ( inUse=1 ) AND `id` NOT IN ('15','16','14')  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000437s ]
+
+[ 2016-06-28T22:27:45+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper/questionSelected/paperid/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+SQL: SHOW COLUMNS FROM `exam_question` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `exam_questionselected` [ RunTime:0.0027s ]
+SQL: SELECT Question.questionName AS questionNameSeleted,Question.questioncontent AS questioncontent,Questionselected.id AS questionIdSelected,Questionselected.paperId AS paperId FROM exam_question Question  JOIN exam_questionselected Questionselected ON Question.id=Questionselected.questionId WHERE ( Questionselected.paperId=2 )  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2016-06-28T22:27:56+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper/saveQuestion?add%5B%5D=25&paperid=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000629s ]
+SQL: SHOW COLUMNS FROM `exam_questionselected` [ RunTime:0.0026s ]
+NOTIC: [8] Undefined index: validate /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `exam_questionselected` (`questionId`,`paperId`) VALUES ('25','2') [ RunTime:0.0404s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000935s ]
+
+[ 2016-06-28T22:27:59+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Room?_=1467124001703
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+NOTIC: [8] Undefined variable: Room /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Admin/fdf63dfb994ea74e55e8f9d9869257cd.php 第 131 行.
+NOTIC: [8] Undefined variable: roomList /Users/liangming/webSite/thinkphp/EXAM/Runtime/Cache/Admin/fdf63dfb994ea74e55e8f9d9869257cd.php 第 132 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058611s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058666s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.039411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.039479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000627s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000688s ]
+
+[ 2016-06-28T22:27:59+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Room/userRange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+NOTIC: [8] Use of undefined constant Org - assumed 'Org' /Users/liangming/webSite/thinkphp/EXAM/Admin/Controller/RoomController.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `exam_org` [ RunTime:0.0028s ]
+SQL: SELECT `id`,orgName as name,parentId as parentId FROM `exam_org`  [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000505s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2016-06-28T22:27:59+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Room/userRange
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+NOTIC: [8] Use of undefined constant Org - assumed 'Org' /Users/liangming/webSite/thinkphp/EXAM/Admin/Controller/RoomController.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `exam_org` [ RunTime:0.0021s ]
+SQL: SELECT `id`,orgName as name,parentId as parentId FROM `exam_org`  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2016-06-28T22:27:59+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Paper/paperList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000343s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `exam_paper` [ RunTime:0.0027s ]
+SQL: SELECT Users.id AS userId,Users.username AS username,Paper.id AS id,Paper.paperName AS paperName,Paper.paperRule1 AS paperRule1,Paper.paperRule2 AS paperRule2,Paper.paperShare AS paperShare,Paper.status AS status,Paper.memo AS memo,Paper.createTime AS createTime FROM exam_users Users  JOIN exam_paper Paper ON Paper.ownerId=Users.id WHERE ( inUse=1 ) ORDER BY Paper.id desc  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000676s ]
+
+[ 2016-06-28T22:27:59+08:00 ] 127.0.0.1 /thinkphp/index.php/admin/Room/roomList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+NOTIC: [8] Undefined index: validate /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1055 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, boolean given /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1055 行.
+NOTIC: [8] Undefined index: auto /Users/liangming/webSite/thinkphp/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: SHOW COLUMNS FROM `exam_room` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `exam_paper` [ RunTime:0.0019s ]
+SQL: SELECT Room.id AS id,Room.roomName AS roomName,Room.paper AS paper,Room.startTime AS startTime,Room.endTime AS endTime,Room.userRange AS userRange,Room.timeLimit AS timeLimit,Room.forceEnd AS forceEnd,Room.memo AS memo,Room.ownerId AS ownerId,Room.createTime AS createTime,Room.status AS status,Users.id AS userid,Users.username AS username,Paper.id AS paperid,Paper.paperName AS paperName FROM exam_room Room  JOIN exam_users Users ON Users.id=Room.ownerId  JOIN exam_paper Paper ON Room.paper=paper.id ORDER BY Room.id desc  [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000407s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000447s ]
+

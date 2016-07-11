@@ -1,0 +1,28 @@
+[ 2016-07-10T08:50:25+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Class/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+SQL: SHOW COLUMNS FROM `exam_class` [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0027s ]
+ERR: 1052:Column 'inUse' in where clause is ambiguous
+ [ SQL语句 ] : SELECT Class.id AS id,Class.className AS className,Class.memo AS memo,Class.ownerId AS ownerId,Class.createTime AS createTime,Class.status AS status,Class.ratedScore AS ratedScore,Class.ratedTime AS ratedTime,Class.classAttach AS classAttach,Users.id AS userid,Users.username AS username FROM exam_class Class  JOIN exam_users Users ON Users.id=Class.ownerId WHERE `inUse` = 1 AND Class.status = 1 ORDER BY Class.id desc 
+ERR: 1052:Column 'inUse' in where clause is ambiguous
+ [ SQL语句 ] : SELECT Class.id AS id,Class.className AS className,Class.memo AS memo,Class.ownerId AS ownerId,Class.createTime AS createTime,Class.status AS status,Class.ratedScore AS ratedScore,Class.ratedTime AS ratedTime,Class.classAttach AS classAttach,Users.id AS userid,Users.username AS username FROM exam_class Class  JOIN exam_users Users ON Users.id=Class.ownerId WHERE `inUse` = 1 AND Class.status = 1 ORDER BY Class.id desc 
+
+[ 2016-07-10T08:50:26+08:00 ] 127.0.0.1 /thinkphp/index.php/Home/Class/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+SQL: SHOW COLUMNS FROM `exam_class` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `exam_users` [ RunTime:0.0022s ]
+ERR: 1052:Column 'inUse' in where clause is ambiguous
+ [ SQL语句 ] : SELECT Class.id AS id,Class.className AS className,Class.memo AS memo,Class.ownerId AS ownerId,Class.createTime AS createTime,Class.status AS status,Class.ratedScore AS ratedScore,Class.ratedTime AS ratedTime,Class.classAttach AS classAttach,Users.id AS userid,Users.username AS username FROM exam_class Class  JOIN exam_users Users ON Users.id=Class.ownerId WHERE `inUse` = 1 AND Class.status = 1 ORDER BY Class.id desc 
+ERR: 1052:Column 'inUse' in where clause is ambiguous
+ [ SQL语句 ] : SELECT Class.id AS id,Class.className AS className,Class.memo AS memo,Class.ownerId AS ownerId,Class.createTime AS createTime,Class.status AS status,Class.ratedScore AS ratedScore,Class.ratedTime AS ratedTime,Class.classAttach AS classAttach,Users.id AS userid,Users.username AS username FROM exam_class Class  JOIN exam_users Users ON Users.id=Class.ownerId WHERE `inUse` = 1 AND Class.status = 1 ORDER BY Class.id desc 
+

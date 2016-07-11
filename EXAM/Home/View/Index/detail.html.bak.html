@@ -1,0 +1,31 @@
+<!--<layout name="tpl/htmlHF" />-->
+<!-- page 容器 -->
+<div class="page">
+<header class="bar bar-nav">
+    <a class="button button-link button-nav pull-left back" href="#" data-transition='slide-out' href="__APP__/Home">
+        <span class="icon icon-left"></span>
+        返回
+    </a>
+    <h1 class="title">考场信息</h1>
+</header>
+<div class="content">
+    <div class="content-block-title">{$roomName}</div>
+    <div class="card facebook-card">
+        <div class="card-header">
+            <div class="facebook-avatar"><img src="__PUBLIC__/light7/img/icon_nav_datetime.png" width="34" height="34"></div>
+            <div class="facebook-date">开放时间:{$startTime}</div>
+            <div class="facebook-date">截止时间:{$endTime}</div>
+        </div>
+        <div class="card-content" style="padding: 10px">
+            相关说明:
+            {$memo}
+        </div>
+        <div class="card-footer">
+            <a href="#" class="link">考试限时:{$timeLimit}分钟</a>
+            <a href="#" class="link">及格分数:{$passScore}</a>
+            <a href="#" class="link">允许超时:{$forceEnd}</a>
+        </div>
+    </div>
+    <p><a href="__APP__/Home/Index/start/roomId/{$roomId}/paperId/{$paperId}" class="button button-fill">开始考试</a></p>
+</div>
+</div>

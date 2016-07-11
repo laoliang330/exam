@@ -1,0 +1,304 @@
+<layout name="tpl/htmlHF" />
+
+<script type="text/javascript">
+		var data = [{
+			"id":1,
+			"name":"C",
+			"size":"",
+			"date":"02/19/2010",
+			"memo":"memo",
+			"children":[{
+				"id":2,
+				"name":"Program Files",
+				"size":"120 MB",
+				"date":"03/20/2010",
+				"children":[{
+					"id":21,
+					"name":"Java",
+					"size":"",
+					"date":"01/13/2010",
+					"state":"closed",
+					"children":[{
+						"id":211,
+						"name":"java.exe",
+						"size":"142 KB",
+						"date":"01/13/2010"
+					},{
+						"id":212,
+						"name":"jawt.dll",
+						"size":"5 KB",
+						"date":"01/13/2010"
+					}]
+				},{
+					"id":22,
+					"name":"MySQL",
+					"size":"",
+					"date":"01/13/2010",
+					"state":"closed",
+					"children":[{
+						"id":221,
+						"name":"my.ini",
+						"size":"10 KB",
+						"date":"02/26/2009"
+					},{
+						"id":222,
+						"name":"my-huge.ini",
+						"size":"5 KB",
+						"date":"02/26/2009"
+					},{
+						"id":223,
+						"name":"my-large.ini",
+						"size":"5 KB",
+						"date":"02/26/2009"
+					}]
+				}]
+			},{
+				"id":3,
+				"name":"eclipse",
+				"size":"",
+				"date":"01/20/2010",
+				"children":[{
+					"id":31,
+					"name":"eclipse.exe",
+					"size":"56 KB",
+					"date":"05/19/2009"
+				},{
+					"id":32,
+					"name":"eclipse.ini",
+					"size":"1 KB",
+					"date":"04/20/2010"
+				},{
+					"id":33,
+					"name":"notice.html",
+					"size":"7 KB",
+					"date":"03/17/2005"
+				}]
+			}]
+		}]
+
+		var editingId;
+		function edit(){
+
+			//editingId=$('#tg').treegrid('select', editingId).id;
+			//alert($('#tg').treegrid('select').id);
+			if (editingId != undefined){
+				$('#tg').treegrid('select', editingId);
+				//alert($('#tg').treegrid('select', editingId));
+				return;
+			}
+			var row = $('#tg').treegrid('getSelected');
+			if (row){
+				row.draggable=false;
+				editingId = row.id
+				$('#tg').treegrid('beginEdit', editingId);
+			}
+		}
+		function save(){
+			if (editingId != undefined){
+				var t = $('#tg');
+				t.treegrid('endEdit', editingId);
+				editingId = undefined;
+				var persons = 0;
+				var rows = t.treegrid('getChildren');
+				for(var i=0; i<rows.length; i++){
+					var p = parseInt(rows[i].persons);
+					if (!isNaN(p)){
+						persons += p;
+					}
+				}
+				//var frow = t.treegrid('getFooterRows')[0];
+				//frow.persons = persons;
+				//t.treegrid('reloadFooter');
+			}
+		}
+		function cancel(){
+			if (editingId != undefined){
+				$('#tg').treegrid('cancelEdit', editingId);
+				editingId = undefined;
+			}
+		}
+
+
+		function addnode(){
+			var node = $('#tg').treegrid('getSelected');
+			$('#tg').treegrid('expand',node.id);
+			if(node){
+				$('#tg').treegrid('expand',node.id);
+				$('#dlg').dialog('open').dialog('center').dialog('setTitle','添加节点');
+				$('#fm').form('clear');
+			}else{
+				myalert("请选择节点!");
+			}
+		}
+
+		var idIndex = 100;
+		function addnodeconfirm(){
+			idIndex++;
+			var nodename=$("#nodename").textbox('getValue');
+			var node = $('#tg').treegrid('getSelected');
+			$('#tg').treegrid('append',{
+				parent: node.id,
+				data: [{
+					id: idIndex,
+					name: nodename,
+				}]
+			})
+			$('#dlg').dialog('close');
+		}
+
+		function removenode(){
+
+			var node = $('#tg').treegrid('getSelected');
+			if(node){
+				//alert($('#tg').treegrid('getChildren',node.id).length);
+				if($('#tg').treegrid('getChildren',node.id).length>0){
+					myalert("节点下有数据，不能删除!");
+				}else{
+					$('#tg').treegrid('remove',node.id);
+				}
+
+			}else{
+				myalert("请选择要删除的节点!");
+			}
+
+			//$('#tg').treegrid('refresh',node.id);
+		}
+
+		function stopdrag(){
+			//onLoadSuccess: function(){
+			$("#tg").tree('disableDnd');
+			//}
+			//}
+		}
+
+
+		function onContextMenu(e,row){
+			if (row){
+				e.preventDefault();
+				$(this).treegrid('select', row.id);
+				$('#mm').menu('show',{
+					left: e.pageX,
+					top: e.pageY
+				});
+			}
+		}
+
+		function collapse(){
+			var node = $('#tg').treegrid('getSelected');
+			if (node){
+				$('#tg').treegrid('collapse', node.id);
+			}
+		}
+		function expand(){
+			var node = $('#tg').treegrid('getSelected');
+			if (node){
+				$('#tg').treegrid('expand', node.id);
+			}
+		}
+
+
+		function myalert(alerinfo){
+			$.messager.alert('提示',alerinfo,'info');
+		}
+
+	</script>
+
+<div style="margin:20px 0;">
+	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="edit()">编辑</a>
+	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="save()">保存</a>
+	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="cancel()">取消</a>
+	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="addnode()">添加节点</a>
+	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="removenode()">删除节点</a>
+</div>
+
+<table id="tg" class="easyui-treegrid ContextMenu" title="Editable TreeGrid" fit="true"
+	   data-options="
+                iconCls: 'icon-ok',
+                rownumbers: true,
+                animate: true,
+                collapsible: true,
+                fitColumns: true,
+                data: data,
+                idField: 'id',
+                treeField: 'name',
+                showFooter: false,
+                pagination:true,
+                pageSize: 1,
+                pageList:[1,2,3],
+            	pagePosition:'top',
+				onLoadSuccess: function(row){
+                    $(this).treegrid('enableDnd', row?row.id:null);
+                },
+                onBeforeEdit: function(row){
+                    $(this).treegrid('disableDnd');
+                },
+                onAfterEdit: function(row){
+                    $(this).treegrid('enableDnd');
+                },
+                onCancelEdit: function(row){
+                    $(this).treegrid('enableDnd');
+                },
+                onDblClickRow: function(row){
+                    editingId=row.id
+                    $(this).treegrid('beginEdit', editingId);
+                },
+				onBeforeLoad: function(row,param){
+					if (!row) {	// load top level rows
+						param.id = 0;	// set id=0, indicate to load new page rows
+					}
+				},
+                onContextMenu: onContextMenu
+            ">
+	<thead>
+	<tr>
+		<th data-options="field:'name',width:180,editor:'text'">Task Name</th>
+		<th data-options="field:'size',width:60,align:'right',editor:'numberbox'">Persons</th>
+		<th data-options="field:'date',width:80,editor:'datebox'">Begin Date</th>
+		<th data-options="field:'memo',width:80,editor:'text'">memo</th>
+
+	</tr>
+	</thead>
+</table>
+<div id="mm" class="easyui-menu" style="width:120px;">
+	<div onclick="addnode()" data-options="iconCls:'icon-add'">添加</div>
+	<div onclick="removenode()" data-options="iconCls:'icon-remove'">删除</div>
+	<div class="menu-sep"></div>
+	<div onclick="edit()">编辑</div>
+	<div class="menu-sep"></div>
+	<div onclick="expand()">展开</div>
+	<div onclick="collapse()">收起</div>
+</div>
+
+
+
+<div id="dlg" class="easyui-dialog" style="width:500px;height:400px;padding:10px 20px"
+	 closed="true" buttons="#dlg-buttons">
+	<div class="ftitle">请填写考场信息</div>
+	<form id="fm" method="post" novalidate>
+		<div class="fitem">
+			<label>节点名称:</label>
+			<input name="nodename"  id="nodename" class="easyui-textbox" required="true" missingMessage="必填">
+		</div>
+		<div class="fitem">
+			<label>选择试卷:</label>
+			<input name="lastname" class="easyui-textbox" required="true" missingMessage="必填">
+		</div>
+		<div class="fitem">
+			<label>起止时间:</label>
+			<input class="easyui-datetimebox" style="width:35%;">
+			<input class="easyui-datetimebox" style="width:35%;">
+		</div>
+		<div class="fitem">
+			<label>人员范围:</label>
+			<input id="cc" class="easyui-combotree" data-options="url:'{$comboTree}',method:'get',multiple:true,value:[122,124]" >
+		</div>
+		<div class="fitem">
+			<label>强制结束:</label>
+			<input class="easyui-switchbutton" data-options="onText:'是',offText:'否'">
+		</div>
+	</form>
+</div>
+<div id="dlg-buttons">
+	<a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="addnodeconfirm()" style="width:90px">保存</a>
+	<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">取消</a>
+</div>

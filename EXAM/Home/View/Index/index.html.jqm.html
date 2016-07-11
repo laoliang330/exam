@@ -1,0 +1,27 @@
+<layout name="tpl/htmlHF" />
+
+<div data-role="page" id="home">
+    <div data-role="header" data-position="fixed">
+        <a href="#" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-comment ui-btn-icon-notext">信息</a>
+        <h1></h1>
+        <a href="#" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-right ui-btn-icon-right ui-icon-user ui-btn-icon-notext">用户</a>
+    </div>
+    <div role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true" data-divider-theme="a">
+            <li data-role="list-divider">当前开放考场</li>
+            <volist name="room" id="vo">
+                <li><a href="Index/detail/id/{$vo.id}">{$vo.roomname}</a></li>
+            </volist>
+        </ul>
+    </div><!-- /content -->
+
+    <div data-role="footer"  data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home" data-ajax="false" class="ui-btn-active">首页</a></li>
+                <li><a href="__APP__/Home/Class/" data-ajax="false" data-icon="star" >课堂</a></li>
+                <li><a href="#" data-icon="gear">Setup</a></li>
+            </ul>
+        </div><!-- /navbar -->
+    </div><!-- /footer -->
+</div><!-- /page -->

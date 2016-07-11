@@ -1,0 +1,30 @@
+[ 2016-06-14T14:14:18+08:00 ] 127.0.0.1 /thinkphp/index.php/Users?_=1465884857407
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+ERR: 无法加载模块:Users
+
+[ 2016-06-14T18:02:18+08:00 ] 127.0.0.1 /thinkphp/index.php/Users?_=1465898535071
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+ERR: 无法加载模块:Users
+
+[ 2016-06-14T18:02:35+08:00 ] 127.0.0.1 /thinkphp/index.php/Users?_=1465898554064
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+ERR: 无法加载模块:Users
+
+[ 2016-06-14T18:03:07+08:00 ] 127.0.0.1 /thinkphp/index.php/Users?_=1465898585299
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+ERR: 无法加载模块:Users
+
+[ 2016-06-14T18:03:46+08:00 ] 127.0.0.1 /thinkphp/index.php/Users?_=1465898623017
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+ERR: 无法加载模块:Users
+

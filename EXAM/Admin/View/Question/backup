@@ -1,0 +1,35 @@
+<div id="dlgexamQuestion" class="easyui-dialog"
+     closed="true" buttons="#dlgQuestion-buttons">
+    <div class="ftitle">请填写试题信息</div>
+    <form id="fmQuestion" method="post" novalidate>
+        <div class="fitem">
+            <label>试题名称:</label>
+            <input name="QuestionName"  id="QuestionName" class="easyui-textbox" required="true" missingMessage="必填">
+        </div>
+        <div class="fitem">
+            <label>试题内容:</label>
+            <input class="easyui-textbox" name="qmemo" id="qmemo" data-options="multiline:true,height:44" />
+        </div>
+        <div class="fitem">
+            <label>判卷方式:</label>
+            <input class="easyui-switchbutton" name="QuestionRule1" id="'QuestionRule1" data-options="onText:'自动判卷',offText:'手动判卷'"  style="width:100px;">
+        </div>
+        <div class="fitem">
+            <label></label>
+            <input class="easyui-switchbutton" name="QuestionShare" id="'QuestionShare" data-options="onText:'共享',offText:'不共享'" style="width:100px;">
+            <input class="easyui-switchbutton" name="qstatus" id="'qstatus" data-options="onText:'开放状态',offText:'锁定状态'"  style="width:100px;">
+
+        </div>
+        <div class="fitem">
+            <label>相关说明:</label>
+            <input class="easyui-textbox" name="qmemo" id="qmemo" data-options="multiline:true,height:44" />
+        </div>
+        <input type="hidden" id="qop" name="qop" value="add">
+        <input type="hidden" id="id" name="id" value="0">
+    </form>
+</div>
+
+<div id="dlgQuestion-buttons">
+    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveExamQuestion()">保存</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlgexamQuestion').dialog('close')" style="width:90px">取消</a>
+</div>
